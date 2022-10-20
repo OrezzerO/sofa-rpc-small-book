@@ -6,10 +6,11 @@ Triple 是新一代RPC协议协议，它是基于 HTTP/2 上构建的 RPC 协议
 2. 支持多种序列化方式，并可以横向扩展出更多序列化方式
 3. 扩展 Header ，与SOFAR RPC、 Dubbo 适配
 
-## 快读开始
+## 快速开始
+TODO
 <!-- todo 补充完整 -->
 
-### HTTP/2 + protobuf (gRPC 
+### HTTP/2 + protobuf (gRPC)
 1. 创建 proto 文件
 2. 生成 Java 代码
 3. 编写引用和实现
@@ -20,8 +21,7 @@ Triple 是新一代RPC协议协议，它是基于 HTTP/2 上构建的 RPC 协议
 ## Triple 工作原理
 
 ### 原生 gRPC 
-<!-- todo 补充完整 -->
-gRPC 使用 HTTP/2 协议。 通过 域名+端口+Path 的形式调用一个方法。其中 Path 形如： ‘/interfaceName/methodName’。这里的 interfaceName 和 methodName 均为 proto 文件中定义的。 <!-- todo 举个🌰 -->
+gRPC 使用 HTTP/2 协议。 通过 域名+端口+Path 的形式调用一个方法。其中 Path 形如： ‘/interfaceName/methodName’。这里的 interfaceName 和 methodName 均为 proto 文件中定义的。 
 
 比如我们写了如下一个 proto 文件： 
 ```proto
@@ -58,7 +58,7 @@ message HelloReply {
 
 
 ### 扩展协议
-我们定义了如下一个通用 proto 文件： 
+在 SOFARPC 内部定义了如下一个通用 proto 文件： 
 ```proto
 syntax = "proto3";
 
